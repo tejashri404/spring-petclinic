@@ -1,4 +1,4 @@
-node{
+node('master'){
 stage('checkout'){
 	echo 'Checking out !!'
 }
@@ -12,3 +12,4 @@ stage('archiving'){
 
 }
 }
+

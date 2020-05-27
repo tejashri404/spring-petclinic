@@ -9,10 +9,7 @@ stages{
 		}
 
 	stage('build'){
-	environment{
 	
-    
-	}
 	steps{
 			echo 'Building out !!'
 			script{

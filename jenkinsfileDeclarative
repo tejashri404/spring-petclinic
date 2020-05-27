@@ -22,10 +22,16 @@ stages{
 		steps{
 			echo 'archiving out !!'
 			archiveArtifacts 'target/*.jar'
+			
+		}
+	}
+	}
+	post {
+		always {
+			echo 'Pipeline finished'
 			testsPublishResults(
 			[pattern:'**/target/surefire-reports/TEST-*.xml', updateResults:false, allowEmptyResults:true, archive:false, active:false]
 			)
 		}
-	}
-	}
+		}
 }

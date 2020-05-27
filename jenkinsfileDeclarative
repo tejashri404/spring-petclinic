@@ -23,7 +23,7 @@ stages{
 			echo 'archiving out !!'
 			archiveArtifacts 'target/*.jar'
 			testsPublishResults(
-			[pattern:**/target/surefire-reports/TEST-*.xml, updateResults:false, allowEmptyResults:true, archive:false, active:false]
+			[pattern:'**/target/surefire-reports/TEST-*.xml', updateResults:false, allowEmptyResults:true, archive:false, active:false]
 			)
 		}
 	}

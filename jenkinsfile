@@ -1,22 +1,23 @@
-pipeline {
-    agent { label 'master'}
-stages {
-        stage('checkout')
-{
-	steps{
-	echo 'Checking out !!'}
-}
+node('any') { 
+    try {
+        stage('Checkout') {
+           
+		echo 'Checking out !!'
+        }
 
-stage('build')
-{	steps{
-	echo 'Building!!'}
-}
+        stage('Build') {
+            
+		echo 'Building!!'
+        }
 
-stage('archiving')
-{	steps{
-	echo 'archiving !!'}
+        stage('Archive') {
 
-}
-}
+		echo 'archiving !!'
+                    }
+    } catch (Exception e) {
+        // Handle exceptions
+        currentBuild.result = 'FAILURE'
+        throw e
+    }
 }
 

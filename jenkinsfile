@@ -1,4 +1,5 @@
-node('master'){
+pipeline {
+    agent { label 'master'}
 stage('checkout'){
 	echo 'Checking out !!'
 }

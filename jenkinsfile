@@ -1,6 +1,8 @@
 pipeline {
     agent { label 'master'}
-stage('checkout'){
+stages {
+        stage('checkout')
+{
 	echo 'Checking out !!'
 }
 
@@ -11,6 +13,7 @@ stage('build'){
 stage('archiving'){
 	echo 'archiving !!'
 
+}
 }
 }
 

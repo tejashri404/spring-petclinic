@@ -12,7 +12,7 @@ stages{
 		steps{
 			echo 'Building out !!'
 			script{
-				env.PATH = 'C:\Program Files\Maven\apache-maven-3.9.8\bin;c:\\Windows\\System32'
+				env.PATH = 'C:\\Program Files\\Maven\\apache-maven-3.9.8\\bin;c:\\Windows\\System32'
 			}
 			bat label: '', script: 'mvn package'
 		}

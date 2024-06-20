@@ -3,15 +3,18 @@ pipeline {
 stages {
         stage('checkout')
 {
-	echo 'Checking out !!'
+	steps{
+	echo 'Checking out !!'}
 }
 
-stage('build'){
-	echo 'Building!!'
+stage('build')
+{	steps{
+	echo 'Building!!'}
 }
 
-stage('archiving'){
-	echo 'archiving !!'
+stage('archiving')
+{	steps{
+	echo 'archiving !!'}
 
 }
 }

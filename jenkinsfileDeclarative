@@ -4,7 +4,7 @@ stages{
 	stage('checkout'){
 		steps{
 			echo 'Checking out !!'
-			git 'https://github.com/vamsibkrishna/spring-petclinic.git'
+			git 'https://github.com/tejashri404/spring-petclinic.git'
 			}
 		}
 
@@ -12,7 +12,7 @@ stages{
 		steps{
 			echo 'Building out !!'
 			script{
-				env.PATH = 'C:/Users/pc/Downloads/apache-maven-3.6.3/bin;c:\\Windows\\System32'
+				env.PATH = 'C:\Program Files\Maven\apache-maven-3.9.8\bin;c:\\Windows\\System32'
 			}
 			bat label: '', script: 'mvn package'
 		}
